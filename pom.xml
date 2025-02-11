@@ -8,6 +8,7 @@
   <name>com.javarush.tyukov.quest Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+<!--    TEST-->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -15,12 +16,14 @@
       <scope>test</scope>
     </dependency>
 
-
+<!--LOMBOK-->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.18.30</version>
     </dependency>
+
+<!--    WEB-->
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
@@ -32,15 +35,12 @@
       <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
       <version>2.0.0</version>
     </dependency>
-
     <dependency>
       <groupId>org.glassfish.web</groupId>
       <artifactId>jakarta.servlet.jsp.jstl</artifactId>
       <version>2.0.0</version>
     </dependency>
   </dependencies>
-
-
 
   <build>
     <finalName>com.javarush.tyukov.quest</finalName>
