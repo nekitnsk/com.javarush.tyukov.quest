@@ -6,5 +6,5 @@ import lombok.AllArgsConstructor;
 public class Answer {
 
     private String answer;
-    private Integer nextStep;
+    private String nextStep;
 }

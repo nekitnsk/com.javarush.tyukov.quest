@@ -5,11 +5,11 @@
 <jsp:include page="header.jsp"/>
 
     <main class="px-3">
-        <h1>Cover your page.</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+        <h1>Тест вашей профориентации</h1>
+        <p class="lead">Этот тест поможет вам понять чем вы хотите заниматься и к чему больше всего вас тянет. А также определиться с реально возможными доходами, исходя из вашего опыта и образования.</p>
         <p class="lead">
-            <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
+            <a href="${pageContext.request.contextPath}/test" class="btn btn-lg btn-light fw-bold border-white bg-white">Давайте уже начнем</a>
         </p>
     </main>
 
-    <jsp:include page="footer.jsp"/>
+<jsp:include page="footer.jsp"/>
