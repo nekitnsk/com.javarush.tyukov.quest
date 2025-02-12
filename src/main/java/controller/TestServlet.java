@@ -1,5 +1,6 @@
 package controller;
 
+import entity.Answer;
 import entity.Question;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -23,41 +24,56 @@ public class TestServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        String ipAddress = req.getRemoteAddr();
-        String hostName = req.getRemoteHost();
-
-        if(ipAddress.equals("0:0:0:0:0:0:0:1") || ipAddress.equals("127.0.0.1")) {
-            InetAddress hostAddress = InetAddress.getLocalHost();
-            ipAddress = hostAddress.getHostAddress();
-        }
-
-        HttpSession session = req.getSession(true);
-        session.setAttribute("ipAddress", ipAddress);
-
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/test.jsp");
-        requestDispatcher.forward(req, resp);
-
+        doGetPost(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGetPost(req, resp);
+    }
+
+    protected void doGetPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+
+        String ipAddress = req.getRemoteAddr();
+
+
+        try {
+            if (ipAddress.equals("0:0:0:0:0:0:0:1") || ipAddress.equals("127.0.0.1")) {
+                InetAddress hostAddress = InetAddress.getLocalHost();
+                ipAddress = hostAddress.getHostAddress();
+            }
+        }catch (Exception e){
+            e.getStackTrace();
+        }
+
+        HttpSession session = req.getSession(true);
+        Integer counterTest = session.getAttribute("counterTest") != null ? (Integer) session.getAttribute("counterTest") : 0;
+
+        session.setAttribute("ipAddress", ipAddress);
+
         String answer = req.getParameter("answer");
 
         TestService testService = new TestService();
 
         String page = "/test.jsp";
 
-        if(answer.equals("final")){
-            page = "/final.jsp";
-        } else if(answer.equals("stop")) {
-            page = "/stop.jsp";
-        }else{
 
-            Question question = testService.getQuestion(answer);
+            if (answer != null && answer.equals("final")) {
+                page = "/final.jsp";
+            } else if (answer != null && answer.equals("stop")) {
+                page = "/stop.jsp";
+            }else{
 
-            req.setAttribute("question", question);
-        }
+                if(answer != null && answer.equals("restart")) {
+                    session.setAttribute("counterTest", ++counterTest);
+                }
+                Question question = testService.getQuestion(answer);
+                Answer answer1 = question.getAnswer1();
+                Answer answer2 = question.getAnswer2();
+                req.setAttribute("question", question);
+                req.setAttribute("answer1", answer1);
+                req.setAttribute("answer2", answer2);
+            }
 
         RequestDispatcher requestDispatcher = req.getRequestDispatcher(page);
         requestDispatcher.forward(req, resp);

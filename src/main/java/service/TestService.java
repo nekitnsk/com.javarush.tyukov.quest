@@ -12,7 +12,13 @@ public class TestService {
         QuestionRepository questionRepository = new QuestionRepository();
         HashMap<String, Question> questions = questionRepository.getQuestions();
 
-        return questions.get(answer);
+        if(answer != null && !answer.isEmpty() && !answer.equals("restart")) {
+            return questions.get(answer);
+        }else {
+            return questions.get("0");
+        }
+
+
 
     }
 }

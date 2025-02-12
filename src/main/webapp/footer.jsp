@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <footer class="mt-auto text-white-50">
-    <p>IP: ${sessionScope.get("ipAddress")} HostName: ${sessionScope.get("hostName")}</p>
+    <p>IP: ${sessionScope.get("ipAddress")} Счётчик: ${sessionScope.get("counterTest")}</p>
 
 </footer>
 </div>

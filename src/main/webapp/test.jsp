@@ -5,11 +5,16 @@
 <jsp:include page="header.jsp"/>
 
     <main class="px-3">
-        <h1>Тест вашей профориентации</h1>
+        <h1>${requestScope.question.question}</h1>
 
-        <form action="/test" method="post">
-            <input type="submit" name="answer" value="One">
-            <input type="submit" name="answer" value="Two">
+        <form action="${pageContext.request.contextPath}/test" method="post" name="test">
+            <button type="submit" name="answer" value="${requestScope.answer1.getNextStep()}">${requestScope.answer1.getAnswer()}</button>
+            <button type="submit" name="answer" value="${requestScope.answer2.getNextStep()}">${requestScope.answer2.getAnswer()}</button>
+        </form>
+
+        <br>
+        <form action="${pageContext.request.contextPath}/test" method="post" name="restart">
+            <button type="submit" name="answer" value="restart">Начать тест заново</button>
         </form>
 
     </main>

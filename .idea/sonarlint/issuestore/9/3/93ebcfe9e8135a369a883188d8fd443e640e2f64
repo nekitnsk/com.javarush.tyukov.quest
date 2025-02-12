@@ -1,0 +1,10 @@
+
+”
+java:S11922"LDefine a constant instead of duplicating this literal "counterTest" 3 times.(ê°…Áúÿÿÿÿ8òÔÏ2J$62ed391f-5401-4bf1-b64d-4ee4248132a2
+m	java:S106"+Replace this use of System.out by a logger.(Ş¸ìÂ8ò¶ûÓÏ2J$513578e5-3c2b-4cc2-8cca-2d9c306e1c5d
+¥
+java:S1989"cHandle the following exceptions that could be thrown by "doGetPost": ServletException, IOException.(‡›¯y8ô¶ûÓÏ2J$363639fa-50a4-4aee-9ca3-81e66ba170a9
+¥
+java:S1989 "cHandle the following exceptions that could be thrown by "doGetPost": ServletException, IOException.(‡›¯y8ö¶ûÓÏ2J$0920e932-5bb6-40e2-bf97-5e3c6705bf09
+©
+java:S1989O"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Şø²åıÿÿÿÿ8ˆ·ûÓÏ2J$795824e9-6b17-49b9-ba85-7b9e356de82c
