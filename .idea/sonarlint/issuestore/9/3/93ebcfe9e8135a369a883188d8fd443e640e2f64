@@ -1,10 +1,10 @@
 
 ”
-java:S11922"LDefine a constant instead of duplicating this literal "counterTest" 3 times.(ê°…Áúÿÿÿÿ8òÔÏ2J$62ed391f-5401-4bf1-b64d-4ee4248132a2
-m	java:S106"+Replace this use of System.out by a logger.(Ş¸ìÂ8ò¶ûÓÏ2J$513578e5-3c2b-4cc2-8cca-2d9c306e1c5d
+java:S11923"LDefine a constant instead of duplicating this literal "counterTest" 3 times.(Ó‘ø§şÿÿÿÿ8¡Õ×ÕÏ2J$01210e05-3907-4264-90b4-2071134cde95
+m	java:S106"+Replace this use of System.out by a logger.(Ş¸ìÂ8«Õ×ÕÏ2J$cf07b55c-7a88-4d66-97b0-dce35f8803b4
 ¥
-java:S1989"cHandle the following exceptions that could be thrown by "doGetPost": ServletException, IOException.(‡›¯y8ô¶ûÓÏ2J$363639fa-50a4-4aee-9ca3-81e66ba170a9
+java:S1989"cHandle the following exceptions that could be thrown by "doGetPost": ServletException, IOException.(‡›¯y8­Õ×ÕÏ2J$f9c5d759-edef-4af1-9ff7-86ccf193a34e
 ¥
-java:S1989 "cHandle the following exceptions that could be thrown by "doGetPost": ServletException, IOException.(‡›¯y8ö¶ûÓÏ2J$0920e932-5bb6-40e2-bf97-5e3c6705bf09
+java:S1989 "cHandle the following exceptions that could be thrown by "doGetPost": ServletException, IOException.(‡›¯y8°Õ×ÕÏ2J$c66a2013-c2bd-4eea-9250-3406c2809623
 ©
-java:S1989O"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Şø²åıÿÿÿÿ8ˆ·ûÓÏ2J$795824e9-6b17-49b9-ba85-7b9e356de82c
+java:S1989N"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Şø²åıÿÿÿÿ8½Õ×ÕÏ2J$af1a064e-de32-4ee9-b535-c36e209dde2f
